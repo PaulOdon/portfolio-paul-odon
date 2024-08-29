@@ -16,7 +16,7 @@ const TechnoItem = ({ text }: { text: string }) => {
 export default function Home() {
   const [showMore, setShowMore] = React.useState(false);
   return (
-    <main className="flex flex-col justify-between bg-black text-white  max-w-screen-lg flex-1 overflow-x-hidden">
+    <main className="flex flex-col justify-between bg-black text-white  max-w-screen-lg flex-1 overflow-x-hidden px-10">
       {/* hero */}
       <div className="flex flex-col items-center justify-center gap-8 py-8">
         <Image
