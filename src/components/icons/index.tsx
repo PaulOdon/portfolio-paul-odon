@@ -1,4 +1,4 @@
-import Linkedin from "./Linkedin.svg";
-import Github from "./Github.svg";
+import Linkedin from "./Linkedin";
+import Github from "./Github";
 
 export { Linkedin, Github };
