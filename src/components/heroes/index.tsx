@@ -5,7 +5,7 @@ import Language from "./Language";
 
 export default function Heroes() {
   return (
-    <div className="flex flex-col items-center justify-center gap-8 pt-20 w-full lg:w-1/2 lg:fixed lg:px-20 lg:left-0 h-full relative">
+    <div className="flex flex-col items-center justify-center gap-8 pt-10 w-full lg:w-1/2 lg:fixed lg:px-20 lg:left-0 h-full relative">
       <Image
         alt="Photo de Paul Odon"
         src={"/Paul.jpg"}
