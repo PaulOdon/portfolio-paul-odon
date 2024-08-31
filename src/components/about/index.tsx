@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="flex flex-col w-full gap-2 pt-10">
+    <div className="flex flex-col w-full gap-2">
       <h3 className="text-3xl font-medium">A propos de moi</h3>
       <p className="tracking-wide font-light text-justify pr-3">
         Développeur Fullstack JavaScript avec plus de 3 années d&#39;expérience

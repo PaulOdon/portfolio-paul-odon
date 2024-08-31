@@ -6,12 +6,12 @@ import React from "react";
 
 export default function Home() {
   return (
-    <main className="flex flex-col lg:flex-row justify-between bg-black text-white  max-w-screen-xl flex-1 overflow-x-hidden px-10 relative">
+    <main className="flex flex-col lg:flex-row justify-between bg-black text-white  max-w-screen-xl flex-1 overflow-x-hidden relative">
       {/* hero */}
       <Heroes />
 
       {/* container content */}
-      <div className="flex flex-col w-full lg:w-1/2 lg:fixed lg:right-0 gap-16 py-8 lg:pr-20 h-full overflow-y-auto">
+      <div className="flex flex-col w-full lg:w-1/2 lg:fixed lg:right-0 gap-16 py-10 lg:pr-20 lg:pl-10 h-full overflow-y-auto px-10">
         <About />
 
         <Experiences />
