@@ -19,7 +19,7 @@ export default function RootLayout({
       <body
         className={
           inter.className +
-          "h-screen w-screen flex lg:flex-row md:flex-col sm:flex-col justify-center bg-black"
+          "h-screen flex lg:flex-row md:flex-col sm:flex-col justify-center bg-black"
         }
       >
         {children}
