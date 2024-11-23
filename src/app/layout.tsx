@@ -33,11 +33,6 @@ export default function RootLayout({
             }),
           }}
         />
-
-        <head>
-          <title>Paul Odon - Portfolio</title>
-          <meta name="description" content="Ingénieur développeur web/mobile" />
-        </head>
       </head>
       <body
         className={
