@@ -6,7 +6,7 @@ import About from "../about";
 
 export default function Heroes() {
   return (
-    <div className="flex flex-col h-screen items-center justify-center gap-8 pt-8">
+    <div className="flex flex-col h-screen min-h-min items-center justify-center gap-8 pt-8">
       {/* <Language /> */}
 
       <Image
