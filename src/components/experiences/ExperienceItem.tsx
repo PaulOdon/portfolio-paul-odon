@@ -18,11 +18,11 @@ export default function ExperienceItem({
 
       <div className="font-extralight tracking-wide p-3 text-justify flex gap-2 text-sm">
         {logo && (
-          <div className="flex flex-1 items-center justify-center w-auto">
+          <div className="flex flex-1 items-center justify-center w-auto sm:hidden">
             <Image src={logo} alt={"title"} width={100} height={100} />
           </div>
         )}
-        <p className={classNames(logo ? "w-3/4" : "w-full")}>
+        <p className={classNames(logo ? "w-3/4 sm:w-full" : "w-full")}>
           {blabla ?? "Bla bla"}
         </p>
       </div>

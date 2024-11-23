@@ -33,21 +33,11 @@ export default function RootLayout({
             }),
           }}
         />
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=G-${""}`}
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
 
-              gtag('config', 'G-${""}');
-            `,
-          }}
-        />
+        <head>
+          <title>Paul Odon - Portfolio</title>
+          <meta name="description" content="Ingénieur développeur web/mobile" />
+        </head>
       </head>
       <body
         className={

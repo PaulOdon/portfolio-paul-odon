@@ -13,9 +13,9 @@ export default function Experiences() {
   };
   return (
     <div className="flex flex-col w-full gap-4 my-0">
-      <h3 className="text-3xl font-medium text-center">
+      <h2 className="text-3xl font-medium text-center">
         Expériences professionnels et projets
-      </h3>
+      </h2>
 
       <div className="flex flex-col gap-8 relative">
         <div className="absolute border-l border-l-gray-900 h-full top-[5px]"></div>
