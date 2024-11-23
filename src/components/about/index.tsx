@@ -2,9 +2,8 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="flex flex-col w-full gap-2">
-      <h3 className="text-3xl font-medium">A propos de moi</h3>
-      <p className="tracking-wide font-light text-justify pr-3">
+    <div className="flex flex-col w-full gap-2 text-center">
+      <p className="tracking-wide font-light text-center pr-3 text-sm">
         Développeur Fullstack JavaScript avec plus de 3 années d&#39;expérience
         dans la conception et le développement d&#39;applications web et
         mobiles. Passionné par les technologies modernes comme React, Next.js,

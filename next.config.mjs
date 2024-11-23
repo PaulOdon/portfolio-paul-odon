@@ -7,6 +7,7 @@ const nextConfig = {
       "object-if.online",
       "etechconsulting-mg.com",
       "images.unsplash.com",
+      "plus.unsplash.com",
     ],
   },
 };

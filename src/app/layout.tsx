@@ -16,6 +16,39 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "http://schema.org",
+              "@type": "Person",
+              name: "Paul Odon",
+              jobTitle: "Ingénieur développeur web/mobile",
+              url: "https://paul-odon.xyz",
+              sameAs: [
+                "https://www.linkedin.com/in/paul-odon/",
+                "https://github.com/PaulOdon",
+              ],
+            }),
+          }}
+        />
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-${""}`}
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-${""}');
+            `,
+          }}
+        />
+      </head>
       <body
         className={
           inter.className +

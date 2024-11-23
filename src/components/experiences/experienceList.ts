@@ -76,6 +76,8 @@ export const EPXERIENCE_LIST: ExperienceDTO[] = [
       "Next.js",
       "Vercel",
     ],
+    url: "https://object-if.online",
+    logo: "https://object-if.online/_next/image?url=%2Flogo.png&w=64&q=75",
   },
   {
     id: 5,
@@ -104,7 +106,7 @@ export const EPXERIENCE_LIST: ExperienceDTO[] = [
     id: 7,
     title: "Développeur FullstackJs - Indépendant (Novembre 2021 - Mars 2022)",
     blabla:
-      "J'ai conçu et développé une plateforme web de gestion des courriers appelée Facilypos et ai participé au développement de l'application mobile associée pour le coursier, nommée Facilyapp. Pour ce projet, j'ai utilisé des technologies telles que Next.js, Nest.js, TypeScript, MariaDB, Prisma, et React Native. J'ai également employé des outils comme VsCode, Android Studio, et GitLab pour gérer le code et les environnements de développement.",
+      "J'ai conçu et développé une plateforme web de gestion des courriers appelée Facilypost et ai participé au développement de l'application mobile associée pour le coursier, nommée Facilyapp. Pour ce projet, j'ai utilisé des technologies telles que Next.js, Nest.js, TypeScript, MariaDB, Prisma, et React Native. J'ai également employé des outils comme VsCode, Android Studio, et GitLab pour gérer le code et les environnements de développement.",
     technologies: [
       "React",
       "Redux",

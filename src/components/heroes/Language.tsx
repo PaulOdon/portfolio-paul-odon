@@ -28,7 +28,7 @@ export default function Language() {
     setLanguage(lang);
   };
   return (
-    <div className="flex absolute lg:top-10 sm:top-10 sm:right-10 lg:left-20 w-fit z-30 items-center justify-center border-primary border border-opacity-30 rounded-full">
+    <div className="flex lg:top-10 sm:top-10 sm:right-10 lg:left-20 w-fit z-30 items-center justify-center border-primary border border-opacity-30 rounded-full">
       <LanguageItemButton
         active={language === "fr"}
         language="FR"

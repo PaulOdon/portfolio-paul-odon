@@ -12,8 +12,10 @@ export default function Experiences() {
     setVisibleCount((prevCount) => prevCount - 3);
   };
   return (
-    <div className="flex flex-col w-full gap-4">
-      <h3 className="text-3xl font-medium">Expériences professionnels</h3>
+    <div className="flex flex-col w-full gap-4 my-0">
+      <h3 className="text-3xl font-medium text-center">
+        Expériences professionnels et projets
+      </h3>
 
       <div className="flex flex-col gap-8 relative">
         <div className="absolute border-l border-l-gray-900 h-full top-[5px]"></div>
