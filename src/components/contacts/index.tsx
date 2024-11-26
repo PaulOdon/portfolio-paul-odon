@@ -1,5 +1,4 @@
 import React from "react";
-import { Github, Linkedin } from "../icons";
 import { LinkIcon } from "@heroicons/react/20/solid";
 import { DevicePhoneMobileIcon } from "@heroicons/react/24/outline";
 

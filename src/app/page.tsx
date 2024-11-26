@@ -7,7 +7,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-between text-white  max-w-screen-lg px-5 gap-5">
+    <main className="flex flex-col justify-between text-white  max-w-screen-lg px-5">
       {/* hero */}
       <Heroes />
 
