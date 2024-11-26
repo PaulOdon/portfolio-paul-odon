@@ -48,10 +48,14 @@ export default function Heroes() {
           <ArrowDownTrayIcon className="w-5" />
           Télécharger mon CV
         </a>
-        {/* <button className="border border-green-600 px-4 py-2 rounded-full flex items-center font-medium text-green-600 gap-1 justify-center text-sm">
+        <a
+          href="https://calendly.com/paulodon/meet-me?back=1&month=2024-11"
+          target="_blank"
+          className="border border-green-600 px-4 py-2 rounded-full flex items-center font-medium text-green-600 gap-1 justify-center text-sm"
+        >
           <VideoCameraIcon className="w-5 text-green-600" />
           Me programmer un meet
-        </button> */}
+        </a>
       </div>
     </div>
   );
