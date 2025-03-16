@@ -18,7 +18,6 @@ export default function Experiences() {
       </h2>
 
       <div className="flex flex-col gap-8 relative">
-        <div className="absolute border-l border-l-gray-900 h-full top-[5px]"></div>
         {EPXERIENCE_LIST.slice(0, visibleCount).map((experience) => (
           <ExperienceItem key={experience.id} experience={experience} />
         ))}

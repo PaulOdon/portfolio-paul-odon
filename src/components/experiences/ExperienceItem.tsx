@@ -13,7 +13,6 @@ export default function ExperienceItem({
   const { title, blabla, technologies, url, logo } = experience;
   return (
     <div className="flex flex-col relative">
-      <div className="min-w-4 min-h-4 w-fit rounded-full bg-gray-400 absolute -left-2 top-[5px] border-4 border-x-primary"></div>
       <h2 className="font-semibold text-gray-400 px-5">{title ?? "Title"}</h2>
 
       <div className="font-extralight tracking-wide p-3 text-justify flex gap-2 text-sm">
