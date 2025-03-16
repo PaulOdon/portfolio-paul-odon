@@ -54,7 +54,7 @@ export default function ExperienceItem({
                 width={100}
                 height={100}
                 alt={String(item?.url)}
-                className="rounded-2xl"
+                className="rounded-2xl hover:scale-[3] transition-all duration-500"
                 src={"/" + item?.url}
               />
             </Link>
