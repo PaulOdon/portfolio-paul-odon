@@ -5,4 +5,8 @@ export type ExperienceDTO = {
   technologies?: string[];
   url?: string;
   logo?: string;
+  images?: {
+    url?: string;
+    link?: string;
+  }[];
 };

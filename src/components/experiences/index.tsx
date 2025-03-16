@@ -25,14 +25,14 @@ export default function Experiences() {
 
       <div className="w-full flex gap-2">
         <button
-          className="text-blue-700 underline text-sm"
+          className="text-sm bg-orange-500 text-white px-2 py-1 rounded-full"
           onClick={handleShowMore}
         >
           Voir plus
         </button>
         {visibleCount > 3 && (
           <button
-            className="text-blue-700 underline text-sm"
+            className="text-white px-2 py-1 rounded-full"
             onClick={handleShowLess}
           >
             Voir moins

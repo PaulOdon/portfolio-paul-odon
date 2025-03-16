@@ -2,7 +2,34 @@ import { ExperienceDTO } from "./ExperienceDTO";
 
 export const EPXERIENCE_LIST: ExperienceDTO[] = [
   {
-    id: 1,
+    id: 8,
+    title:
+      "Développeur fullstack JS et développeur Mobile (Juillet 2024 - Présent)",
+    blabla:
+      "An-tsoratra est une plateforme SAAS qui a plusieurs application de gestion pour différents secteur. J'ai participé (et paricipe encore) sur le développement front-end de la plateform elle même et aussi sur quelques applications mobiles et web tel que l'application mobile CashPoint et l'application gestion de vente.",
+    technologies: [
+      "React",
+      "NextJs",
+      "Vite",
+      "NestJs",
+      "React Native",
+      "Zustand",
+      "RNR",
+      "Figma",
+      "Docker",
+      "Redux",
+      "Kotlin",
+    ],
+    url: "https://an-tsoratra.com",
+    logo: "https://an-tsoratra.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FtopLeft1.f906a76a.png&w=384&q=75",
+    images: [
+      { url: "antsoratra.png", link: "https://an-tsoratra.com/" },
+      { url: "cashpoint.png", link: "https://an-tsoratra.com/c-point" },
+      { url: "vente.png", link: "https://an-tsoratra.com/vente" },
+    ],
+  },
+  {
+    id: 7,
     title:
       "Développeur FullstackJs et Développeur Mobile - Indépendant (Novembre 2023 - Présent)",
     blabla:
@@ -16,12 +43,18 @@ export const EPXERIENCE_LIST: ExperienceDTO[] = [
       "Nest.js",
       "Next.js",
       "Tailwind CSS",
+      "Firebase push notification",
+      "Facebook graph API",
     ],
     url: "https://www.soka.club/",
     logo: "https://www.soka.club/new-design/logo_soka.png",
+    images: [
+      { url: "sokaweb.png", link: "https://www.soka.club/" },
+      { url: "sokalive.png", link: "https://live.soka.club/match" },
+    ],
   },
   {
-    id: 2,
+    id: 6,
     title:
       "Développeur Fullstack JAVA/React - Etech Consulting (Septembre 2022 - Présent)",
     blabla:
@@ -40,7 +73,7 @@ export const EPXERIENCE_LIST: ExperienceDTO[] = [
     logo: "https://etechconsulting-mg.com/web/image/website/1/logo/etech?unique=bf3a896",
   },
   {
-    id: 3,
+    id: 5,
     title:
       "Développeur FullstackJs et Designer - Object-if (Août 2023 - Novembre 2023)",
     blabla:
@@ -80,7 +113,7 @@ export const EPXERIENCE_LIST: ExperienceDTO[] = [
     logo: "https://object-if.online/_next/image?url=%2Flogo.png&w=64&q=75",
   },
   {
-    id: 5,
+    id: 3,
     title:
       "Développeur Fullstack Javascript - Indépendant (Avril 2022 - Août 2022)",
     blabla:
@@ -96,14 +129,14 @@ export const EPXERIENCE_LIST: ExperienceDTO[] = [
     ],
   },
   {
-    id: 6,
+    id: 2,
     title: "Développeur iOS - Livenexx (Octobre 2021 - Octobre 2022)",
     blabla:
       "J'ai travaillé comme développeur iOS chez Livenexx, où j'ai développé et maintenu des applications mobiles en utilisant Swift. Mon rôle consistait à concevoir et implémenter des fonctionnalités en utilisant des technologies telles que Alamofire pour la gestion des requêtes réseau et Storyboard pour la conception d'interfaces utilisateur. J'ai également participé à l'optimisation des performances des applications et à la résolution de bugs, tout en collaborant avec les équipes backend et design pour garantir une intégration fluide des fonctionnalités.",
     technologies: ["Swift", "Alamofire", "Storyboard"],
   },
   {
-    id: 7,
+    id: 1,
     title: "Développeur FullstackJs - Indépendant (Novembre 2021 - Mars 2022)",
     blabla:
       "J'ai conçu et développé une plateforme web de gestion des courriers appelée Facilypost et ai participé au développement de l'application mobile associée pour le coursier, nommée Facilyapp. Pour ce projet, j'ai utilisé des technologies telles que Next.js, Nest.js, TypeScript, MariaDB, Prisma, et React Native. J'ai également employé des outils comme VsCode, Android Studio, et GitLab pour gérer le code et les environnements de développement.",
