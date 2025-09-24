@@ -34,8 +34,8 @@ export default function Home() {
       </div>
 
       {/* Contact Section */}
-      <section className="bg-gradient-to-r from-dark-gray to-darker-gray py-8">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="py-8">
+        <div className="max-w-5xl mx-auto">
           <Contacts />
         </div>
       </section>

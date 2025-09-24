@@ -6,6 +6,7 @@ import {
   DevicePhoneMobileIcon,
   EnvelopeIcon,
 } from "@heroicons/react/24/outline";
+import WhatsappIcon from "./WhatsappIcon";
 
 export default function Contacts() {
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -43,7 +44,7 @@ export default function Contacts() {
       </div>
 
       {/* Contact Cards Grid */}
-      <div className="max-w-4xl mx-auto w-full">
+      <div className="max-w-5xl mx-auto w-full">
         <div className="grid gap-4 md:gap-6">
           {/* Main Contact Card */}
           <div className="bg-gradient-to-br from-dark-gray/90 to-darker-gray/90 backdrop-blur-md rounded-2xl border border-gray-800/60 hover:border-primary/40 transition-all duration-500 group overflow-hidden">
@@ -59,7 +60,7 @@ export default function Contacts() {
                       <h3 className="font-semibold text-white text-sm">
                         Email
                       </h3>
-                      <p className="text-xs text-gray-500">Professionnel</p>
+                      <p className="text-xs text-gray-500">Personnel</p>
                     </div>
                   </div>
                   <div className="relative">
@@ -105,11 +106,11 @@ export default function Contacts() {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 bg-accent/10 rounded-lg border border-accent/20">
-                      <DevicePhoneMobileIcon className="w-5 h-5 text-accent" />
+                      <WhatsappIcon />
                     </div>
                     <div>
                       <h3 className="font-semibold text-white text-sm">
-                        Téléphone
+                        Whatsapp
                       </h3>
                       <p className="text-xs text-gray-500">Madagascar</p>
                     </div>
