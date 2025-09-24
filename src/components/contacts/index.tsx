@@ -37,8 +37,8 @@ export default function Contacts() {
           <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
         </div>
         <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base">
-          Une idée de projet ? Une collaboration ? N'hésitez pas à me contacter
-          !
+          Une idée de projet ? Une collaboration ? N&apos;hésitez pas à me
+          contacter !
         </p>
       </div>
 
@@ -242,7 +242,7 @@ export default function Contacts() {
 
         <div className="text-center">
           <p className="text-xs text-gray-600">
-            Développeur FullStack passionné par la création d'expériences
+            Développeur FullStack passionné par la création d&apos;expériences
             numériques exceptionnelles
           </p>
         </div>

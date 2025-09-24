@@ -17,7 +17,7 @@ export default function Formations() {
 
                 <div className="flex items-center gap-2 text-primary font-semibold text-sm">
                   <MapPinIcon className="w-4 h-4" />
-                  <span>École Nationale d'Informatique (ENI)</span>
+                  <span>École Nationale d&apos;Informatique (ENI)</span>
                 </div>
               </div>
             </div>
@@ -55,7 +55,7 @@ export default function Formations() {
                 </h4>
                 <ul className="text-gray-400 text-xs space-y-1">
                   <li>• Architecture logicielle</li>
-                  <li>• Développement d'applications</li>
+                  <li>• Développement d&apos;applications</li>
                   <li>• Méthodologies Agile/SCRUM</li>
                   <li>• Tests et qualité logicielle</li>
                 </ul>
@@ -97,7 +97,7 @@ export default function Formations() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 mt-2 text-xs text-accent hover:text-accent-light transition-colors"
                   >
-                    <span>Découvrir l'ENI</span>
+                    <span>Découvrir l&apos;ENI</span>
                     <svg
                       className="w-3 h-3"
                       fill="none"

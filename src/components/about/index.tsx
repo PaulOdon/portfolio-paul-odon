@@ -8,10 +8,10 @@ export default function About() {
         <span className="text-primary font-semibold">Fullstack JavaScript</span>{" "}
         avec plus de{" "}
         <span className="text-primary font-semibold">
-          4 années d'expérience
+          4 années d&apos;expérience
         </span>{" "}
-        dans la conception et le développement d'applications web et mobiles.
-        Passionné par les technologies modernes comme{" "}
+        dans la conception et le développement d&apos;applications web et
+        mobiles. Passionné par les technologies modernes comme{" "}
         <span className="text-accent-light">React</span>,{" "}
         <span className="text-accent-light">Next.js</span>, et{" "}
         <span className="text-accent-light">Node.js</span> et le design web, je
