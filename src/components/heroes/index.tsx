@@ -3,6 +3,7 @@ import { Github, Linkedin } from "../icons";
 import Image from "next/image";
 import Language from "./Language";
 import About from "../about";
+import Link from "next/link";
 
 export default function Heroes() {
   return (
@@ -65,10 +66,14 @@ export default function Heroes() {
             <ArrowDownTrayIcon className="w-5 group-hover:animate-bounce" />
             Télécharger mon CV
           </a>
-          <button className="group border-2 border-accent text-accent hover:bg-accent hover:text-white px-8 py-4 rounded-full flex items-center font-semibold gap-3 justify-center transition-all duration-300 transform hover:scale-105 min-w-[200px]">
+          <Link
+            href="https://calendly.com/paulodon/meet-me"
+            target="_blank"
+            className="group border-2 border-accent text-accent hover:bg-accent hover:text-white px-8 py-4 rounded-full flex items-center font-semibold gap-3 justify-center transition-all duration-300 transform hover:scale-105 min-w-[200px]"
+          >
             <VideoCameraIcon className="w-5 group-hover:animate-pulse" />
             Me programmer un meet
-          </button>
+          </Link>
         </div>
       </div>
     </section>

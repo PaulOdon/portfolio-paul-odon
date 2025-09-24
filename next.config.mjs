@@ -8,7 +8,8 @@ const nextConfig = {
       "etechconsulting-mg.com",
       "images.unsplash.com",
       "plus.unsplash.com",
-      "postimg.cc",
+      "i.postimg.cc",
+      "an-tsoratra.com",
     ],
   },
 };
