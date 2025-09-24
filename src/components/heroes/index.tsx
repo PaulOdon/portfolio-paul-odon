@@ -4,6 +4,7 @@ import Image from "next/image";
 import Language from "./Language";
 import About from "../about";
 import Link from "next/link";
+import WhatsappIcon from "../contacts/WhatsappIcon";
 
 export default function Heroes() {
   return (
@@ -74,6 +75,10 @@ export default function Heroes() {
             <VideoCameraIcon className="w-5 group-hover:animate-pulse" />
             Me programmer un meet
           </Link>
+          <button className="group border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-white px-8 py-4 rounded-full flex items-center font-semibold gap-3 justify-center transition-all duration-300 transform hover:scale-105 min-w-[200px]">
+            <WhatsappIcon />
+            +261 34 28 622 06
+          </button>
         </div>
       </div>
     </section>
