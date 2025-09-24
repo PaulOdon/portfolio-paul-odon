@@ -9,4 +9,14 @@
 }
 
 @layer utilities {
+  .hero-glow {
+    position: relative;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(21, 214, 150, 0.1) 15%,
+      rgba(4, 93, 236, 0.08) 50%,
+      rgba(228, 94, 5, 0.08) 95%,
+      transparent 100%
+    );
+  }
 }

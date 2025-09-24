@@ -2,36 +2,29 @@ import { ExperienceDTO } from "./ExperienceDTO";
 
 export const EPXERIENCE_LIST: ExperienceDTO[] = [
   {
-    id: 8,
-    title:
-      "Développeur fullstack JS et développeur Mobile (Juillet 2024 - Présent)",
+    id: 0,
+    title: "Développeur FullStack Lead - Indépendant (Août 2025 - Présent)",
     blabla:
-      "An-tsoratra est une plateforme SAAS qui a plusieurs application de gestion pour différents secteur. J'ai participé (et paricipe encore) sur le développement front-end de la plateform elle même et aussi sur quelques applications mobiles et web tel que l'application mobile CashPoint et l'application gestion de vente.",
+      "Conception et développement d'un écosystème numérique complet pour le secteur médical : Plateforme Medical Place Phoenix. J'ai créé une plateforme SaaS multi-tenant composée de 5 applications interconnectées destinées aux professionnels de santé et fournisseurs médicaux. Architecture technique moderne avec Next.js 15, React 19, Supabase et PostgreSQL. Implémentation de fonctionnalités avancées : gestion multi-tenant, visualisation de données médicales, cartographie interactive, calendrier médical, et système de gestion complète des établissements de santé.",
     technologies: [
+      "Next.js",
       "React",
-      "NextJs",
-      "Vite",
-      "NestJs",
-      "React Native",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "TailwindCSS",
       "Zustand",
-      "RNR",
-      "Figma",
-      "Docker",
-      "Redux",
-      "Kotlin",
+      "Shadcn",
+      "Reactive Resume",
+      "Openlayer",
     ],
-    url: "https://an-tsoratra.com",
-    logo: "https://an-tsoratra.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FtopLeft1.f906a76a.png&w=384&q=75",
-    images: [
-      { url: "antsoratra.png", link: "https://an-tsoratra.com/" },
-      { url: "cashpoint.png", link: "https://an-tsoratra.com/c-point" },
-      { url: "vente.png", link: "https://an-tsoratra.com/vente" },
-    ],
+    url: "https://medical-place.com/territoire-de-sant%C3%A9",
+    logo: "https://i.postimg.cc/VNPfZDGg/Design-sans-titre-6.png",
   },
   {
-    id: 7,
+    id: 1,
     title:
-      "Développeur FullstackJs et Développeur Mobile - Indépendant (Novembre 2023 - Présent)",
+      "Développeur FullstackJs et Développeur Mobile - Indépendant (Novembre 2022 - Avril 2024)",
     blabla:
       "Je travaille en tant que développeur Fullstack JavaScript indépendant, où nous avons conçu et développé une plateforme de pronostics de matchs de football appelée SOKA. Nous avons également créé l'application mobile SOKA Live avec React Native, tout en développant une version web en Progressive Web App (PWA). J'ai aussi participé à l'intégration du front-end, au développement du back-office, ainsi qu'à la conception de bases de données, en utilisant des technologies telles que React, Redux, RTK Query, TypeScript, PostgreSQL, Nest.js, Next.js, et Tailwind CSS.",
     technologies: [
@@ -56,7 +49,7 @@ export const EPXERIENCE_LIST: ExperienceDTO[] = [
   {
     id: 6,
     title:
-      "Développeur Fullstack JAVA/React - Etech Consulting (Septembre 2022 - Présent)",
+      "Développeur Fullstack JAVA/React - Etech Consulting (Septembre 2022 - Juillet 2025)",
     blabla:
       "Chez Etech Consulting, j'interviens principalement en tant que développeur Fullstack Java/React. J'ai contribué au développement d'applications web et mobiles pour la Commune Urbaine d'Antananarivo (OIM-CUA), et à des projets de gestion et de traçabilité pour Renault. J' ai participé à la conception des maquettes graphiques avec Figma et travaillé sur le développement frontend de plusieurs grandes applications, en utilisant des outils et technologies comme React, Vite, Redux, TypeScript, MongoDB, Tailwind CSS, et Google Cloud Platform Maps (GCP Maps).",
     technologies: [
@@ -71,6 +64,26 @@ export const EPXERIENCE_LIST: ExperienceDTO[] = [
     ],
     url: "https://etechconsulting-mg.com/",
     logo: "https://etechconsulting-mg.com/web/image/website/1/logo/etech?unique=bf3a896",
+  },
+  {
+    id: 3,
+    title: "Développeur Frontend Principal - Indépendant (2024)",
+    blabla:
+      "Développeur frontend principal sur An-Tsoratra, une plateforme numérique pour la gestion de la vie quotidienne avec contenu, rédaction, statistiques et outils utilisateur. Conception et implémentation d'interfaces utilisateur intuitives et performantes : pages de contenu, tableau de bord, espace utilisateur, et affichage des statistiques. Participation active au développement de CashPoint mobile avec adaptation responsive, optimisation UX pour petits écrans et navigation fluide. Collaboration avec l'équipe backend pour l'intégration des API d'authentification, gestion des contenus et statistiques. Mise en place d'UI modernes cohérentes avec le branding, amélioration de l'expérience mobile et réduction des temps de chargement.",
+    technologies: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "i18next",
+      "PWA",
+      "Redux",
+      "RTK Query",
+      "Axios",
+      "Responsive Design",
+      "Mobile Development",
+    ],
+    url: "https://an-tsoratra.com/",
+    logo: "https://an-tsoratra.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FtopLeft1.f906a76a.png&w=750&q=75",
   },
   {
     id: 5,
@@ -95,7 +108,7 @@ export const EPXERIENCE_LIST: ExperienceDTO[] = [
     logo: "https://object-if.online/_next/image?url=%2Flogo.png&w=64&q=75",
   },
   {
-    id: 4,
+    id: 6,
     title:
       "Développeur FullstackJs et Designer - Object-if (Octobre 2022 - Février 2023)",
     blabla:
@@ -113,7 +126,7 @@ export const EPXERIENCE_LIST: ExperienceDTO[] = [
     logo: "https://object-if.online/_next/image?url=%2Flogo.png&w=64&q=75",
   },
   {
-    id: 3,
+    id: 7,
     title:
       "Développeur Fullstack Javascript - Indépendant (Avril 2022 - Août 2022)",
     blabla:
@@ -129,14 +142,14 @@ export const EPXERIENCE_LIST: ExperienceDTO[] = [
     ],
   },
   {
-    id: 2,
+    id: 8,
     title: "Développeur iOS - Livenexx (Octobre 2021 - Octobre 2022)",
     blabla:
       "J'ai travaillé comme développeur iOS chez Livenexx, où j'ai développé et maintenu des applications mobiles en utilisant Swift. Mon rôle consistait à concevoir et implémenter des fonctionnalités en utilisant des technologies telles que Alamofire pour la gestion des requêtes réseau et Storyboard pour la conception d'interfaces utilisateur. J'ai également participé à l'optimisation des performances des applications et à la résolution de bugs, tout en collaborant avec les équipes backend et design pour garantir une intégration fluide des fonctionnalités.",
     technologies: ["Swift", "Alamofire", "Storyboard"],
   },
   {
-    id: 1,
+    id: 9,
     title: "Développeur FullstackJs - Indépendant (Novembre 2021 - Mars 2022)",
     blabla:
       "J'ai conçu et développé une plateforme web de gestion des courriers appelée Facilypost et ai participé au développement de l'application mobile associée pour le coursier, nommée Facilyapp. Pour ce projet, j'ai utilisé des technologies telles que Next.js, Nest.js, TypeScript, MariaDB, Prisma, et React Native. J'ai également employé des outils comme VsCode, Android Studio, et GitLab pour gérer le code et les environnements de développement.",

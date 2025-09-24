@@ -3,60 +3,79 @@ import { Github, Linkedin } from "../icons";
 import Image from "next/image";
 import Language from "./Language";
 import About from "../about";
+import Link from "next/link";
 
 export default function Heroes() {
   return (
-    <div className="flex flex-col h-screen min-h-min items-center justify-center gap-8 pt-8">
-      {/* <Language /> */}
+    <section className="h-screen flex items-center justify-center py-8 px-4 hero-glow">
+      <div className="max-w-4xl mx-auto text-center">
+        <div className="flex justify-center mb-6">
+          <Image
+            alt="Photo de Paul Odon"
+            src={"/Paul.jpg"}
+            width={150}
+            height={150}
+            className="rounded-full border-4 border-primary"
+          />
+        </div>
 
-      <Image
-        alt="Photo de Paul Odon"
-        src={"/Paul.jpg"}
-        width={200}
-        height={200}
-        className="rounded-full border-4 border-primary"
-      />
+        {/* Main Title */}
+        <div className="mb-6 space-y-3">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent leading-tight">
+            Salut! Je suis{" "}
+            <span className="bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
+              Paul Odon
+            </span>
+          </h1>
 
-      <div className="flex flex-col justify-center gap-2 w-full text-center">
-        <h1 className="text-5xl font-semibold ">
-          Salut! Je suis <span className="text-primary">Paul Odon</span>
-        </h1>
+          <h2 className="text-base md:text-lg lg:text-xl font-medium text-gray-300 max-w-2xl mx-auto">
+            Ingénieur développeur web/mobile confirmé
+          </h2>
+        </div>
 
-        <h2 className="text-xl font-bold">
-          Ingénieur développeur web/mobile confirmé
-        </h2>
+        {/* Social Links */}
+        <div className="flex items-center justify-center gap-6 mb-6">
+          <a
+            href="https://www.linkedin.com/in/paul-odon"
+            target="_blank"
+            className="p-3 rounded-full bg-dark-gray hover:bg-primary transition-all duration-300 transform hover:scale-110 shadow-lg"
+          >
+            <Linkedin />
+          </a>
+          <a
+            href="https://github.com/PaulOdon"
+            target="_blank"
+            className="p-3 rounded-full bg-dark-gray hover:bg-primary transition-all duration-300 transform hover:scale-110 shadow-lg"
+          >
+            <Github />
+          </a>
+        </div>
+
+        {/* About Section */}
+        <div className="mb-6 max-w-3xl mx-auto">
+          <About />
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a
+            href="/CV-Paul_Odon.pdf"
+            download={"CV-Paul_Odon"}
+            className="group bg-gradient-to-r from-primary to-primary-light text-white px-8 py-4 rounded-full flex items-center font-semibold gap-3 justify-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl min-w-[200px]"
+          >
+            <ArrowDownTrayIcon className="w-5 group-hover:animate-bounce" />
+            Télécharger mon CV
+          </a>
+          <Link
+            href="https://calendly.com/paulodon/meet-me"
+            target="_blank"
+            className="group border-2 border-accent text-accent hover:bg-accent hover:text-white px-8 py-4 rounded-full flex items-center font-semibold gap-3 justify-center transition-all duration-300 transform hover:scale-105 min-w-[200px]"
+          >
+            <VideoCameraIcon className="w-5 group-hover:animate-pulse" />
+            Me programmer un meet
+          </Link>
+        </div>
       </div>
-
-      <div className="flex items-center gap-8">
-        <a href="https://www.linkedin.com/in/paul-odon" target="_blank">
-          <Linkedin />
-        </a>
-        <a href="https://github.com/PaulOdon" target="_blank">
-          <Github />
-        </a>
-      </div>
-
-      <About />
-
-      {/* download CV and book a meet */}
-      <div className="flex flex-row sm:flex-col md:flex-col lg:flex-row gap-4 justify-center w-full">
-        <a
-          href="/CV-Paul_Odon.pdf"
-          download={"CV-Paul_Odon"}
-          className="bg-primary bg-opacity-20 text-primary border border-primary border-opacity-20 px-4 py-2 rounded-full flex items-center font-medium gap-1 justify-center text-sm"
-        >
-          <ArrowDownTrayIcon className="w-5" />
-          Télécharger mon CV
-        </a>
-        <a
-          href="https://calendly.com/paulodon/meet-me?back=1&month=2024-11"
-          target="_blank"
-          className="border border-green-600 px-4 py-2 rounded-full flex items-center font-medium text-green-600 gap-1 justify-center text-sm"
-        >
-          <VideoCameraIcon className="w-5 text-green-600" />
-          Me programmer un meet
-        </a>
-      </div>
-    </div>
+    </section>
   );
 }
