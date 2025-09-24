@@ -39,12 +39,7 @@ export default function RootLayout({
           <meta name="description" content="Ingénieur développeur web/mobile" />
         </head>
       </head>
-      <body
-        className={
-          inter.className +
-          "h-screen flex lg:flex-row md:flex-col sm:flex-col justify-center bg-black"
-        }
-      >
+      <body className={inter.className + " bg-black"}>
         {children}
       </body>
     </html>

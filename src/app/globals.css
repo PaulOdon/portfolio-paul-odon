@@ -9,4 +9,33 @@
 }
 
 @layer utilities {
+  .hero-glow {
+    position: relative;
+    background: radial-gradient(ellipse at center,
+      rgba(16, 185, 129, 0.1) 0%,
+      rgba(59, 130, 246, 0.08) 25%,
+      rgba(245, 158, 11, 0.1) 50%,
+      rgba(16, 185, 129, 0.08) 75%,
+      transparent 100%);
+    animation: glow-pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% {
+      background: radial-gradient(ellipse at center,
+        rgba(16, 185, 129, 0.1) 0%,
+        rgba(59, 130, 246, 0.08) 25%,
+        rgba(245, 158, 11, 0.1) 50%,
+        rgba(16, 185, 129, 0.08) 75%,
+        transparent 100%);
+    }
+    50% {
+      background: radial-gradient(ellipse at center,
+        rgba(245, 158, 11, 0.15) 0%,
+        rgba(16, 185, 129, 0.12) 25%,
+        rgba(59, 130, 246, 0.15) 50%,
+        rgba(245, 158, 11, 0.12) 75%,
+        transparent 100%);
+    }
+  }
 }
