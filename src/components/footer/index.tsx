@@ -237,7 +237,7 @@ export default function Contacts() {
           <div className="flex items-center gap-4 text-xs text-gray-500">
             <span>Construit avec Next.js & Tailwind CSS</span>
             <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
-            <span>Version 0.3</span>
+            <span>Version 0.6</span>
           </div>
         </div>
 

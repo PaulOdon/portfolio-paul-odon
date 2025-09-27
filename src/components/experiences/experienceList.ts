@@ -5,7 +5,7 @@ export const EPXERIENCE_LIST: ExperienceDTO[] = [
     id: 0,
     title: "Développeur FullStack Lead - Indépendant (Août 2025 - Présent)",
     blabla:
-      "Conception et développement d'un écosystème numérique complet pour le secteur médical : Plateforme Medical Place Phoenix. J'ai créé une plateforme SaaS multi-tenant composée de 5 applications interconnectées destinées aux professionnels de santé et fournisseurs médicaux. Architecture technique moderne avec Next.js 15, React 19, Supabase et PostgreSQL. Implémentation de fonctionnalités avancées : gestion multi-tenant, visualisation de données médicales, cartographie interactive, calendrier médical, et système de gestion complète des établissements de santé.",
+      "Conception et développement d'un écosystème numérique complet pour le secteur médical : Plateforme Medical Place. J'ai participé sur le developpement d'une plateforme SaaS multi-tenant composée de quelques applications interconnectées destinées aux professionnels de santé et fournisseurs médicaux. Architecture technique moderne avec Next.js 15, React 19, DRF eet PostgreSQL. Implémentation de fonctionnalités avancées : visualisation de données médicales, cartographie interactive, calendrier médical, et système de gestion complète des établissements de santé, annuiare, intégration des application externes comme Rx Resume, Matrix",
     technologies: [
       "Next.js",
       "React",
@@ -17,6 +17,8 @@ export const EPXERIENCE_LIST: ExperienceDTO[] = [
       "Shadcn",
       "Reactive Resume",
       "Openlayer",
+      "RxResume",
+      "Matrix",
     ],
     url: "https://medical-place.com/territoire-de-sant%C3%A9",
     logo: "https://i.postimg.cc/VNPfZDGg/Design-sans-titre-6.png",

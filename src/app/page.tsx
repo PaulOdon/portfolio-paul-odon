@@ -1,7 +1,7 @@
-import Contacts from "@/components/contacts";
+import Contacts from "@/components/footer";
 import Experiences from "@/components/experiences";
 import Formations from "@/components/formations";
-import Heroes from "@/components/heroes";
+import Heroes from "@/components/hero";
 import Portfolio from "@/components/portfolio";
 import React from "react";
 

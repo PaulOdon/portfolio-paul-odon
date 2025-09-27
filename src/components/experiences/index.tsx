@@ -26,7 +26,17 @@ export default function Experiences() {
   const allTechnologies = Array.from(
     new Set(EPXERIENCE_LIST.flatMap((exp) => exp.technologies || []))
   );
-  const topTechnologies = allTechnologies.slice(0, 5);
+  const topTechnologies = [
+    "Next.js",
+    "Nuxt.js",
+    "Nest.js",
+    "React Native",
+    "Postgresql",
+    "Typescript",
+    "Vite",
+    "React",
+    "Vue",
+  ];
   return (
     <div className="flex flex-col w-full gap-6">
       {/* Enhanced Section Header */}
@@ -62,7 +72,7 @@ export default function Experiences() {
         {topTechnologies.length > 0 && (
           <div className="flex items-center justify-center gap-1.5 flex-wrap text-xs">
             <span className="text-gray-500">Stack principal:</span>
-            {topTechnologies.slice(0, 4).map((tech) => (
+            {topTechnologies.slice(0, 8).map((tech) => (
               <span
                 key={tech}
                 className="bg-gray-800/40 text-gray-400 px-2 py-0.5 rounded-md border border-gray-700/30 text-xs"

@@ -12,7 +12,9 @@ export default function About() {
         </span>{" "}
         dans la conception et le développement d&apos;applications web et
         mobiles. Passionné par les technologies modernes comme{" "}
+        <span className="text-green-400">Vue</span>,{" "}
         <span className="text-accent-light">React</span>,{" "}
+        <span className="text-green-400">Nuxt.js</span>,
         <span className="text-accent-light">Next.js</span>, et{" "}
         <span className="text-accent-light">Node.js</span> et le design web, je
         me spécialise dans la création de solutions innovantes et performantes

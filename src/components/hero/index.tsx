@@ -4,7 +4,7 @@ import Image from "next/image";
 import Language from "./Language";
 import About from "../about";
 import Link from "next/link";
-import WhatsappIcon from "../contacts/WhatsappIcon";
+import WhatsappIcon from "../footer/WhatsappIcon";
 
 export default function Heroes() {
   return (
@@ -30,7 +30,7 @@ export default function Heroes() {
           </h1>
 
           <h2 className="text-base md:text-lg lg:text-xl font-medium text-gray-300 max-w-2xl mx-auto">
-            Ingénieur développeur web/mobile confirmé
+            Ingénieur développeur web/mobile
           </h2>
         </div>
 
