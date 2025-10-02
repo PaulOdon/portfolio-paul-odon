@@ -3,7 +3,7 @@ import { ExperienceDTO } from "./ExperienceDTO";
 export const EPXERIENCE_LIST: ExperienceDTO[] = [
   {
     id: 0,
-    title: "Développeur FullStack Lead - Indépendant (Août 2025 - Présent)",
+    title: "Développeur Frontend - Indépendant (Août 2025 - Présent)",
     blabla:
       "Conception et développement d'un écosystème numérique complet pour le secteur médical : Plateforme Medical Place. J'ai participé sur le developpement d'une plateforme SaaS multi-tenant composée de quelques applications interconnectées destinées aux professionnels de santé et fournisseurs médicaux. Architecture technique moderne avec Next.js 15, React 19, DRF eet PostgreSQL. Implémentation de fonctionnalités avancées : visualisation de données médicales, cartographie interactive, calendrier médical, et système de gestion complète des établissements de santé, annuiare, intégration des application externes comme Rx Resume, Matrix",
     technologies: [
@@ -22,6 +22,27 @@ export const EPXERIENCE_LIST: ExperienceDTO[] = [
     ],
     url: "https://medical-place.com/territoire-de-sant%C3%A9",
     logo: "https://i.postimg.cc/VNPfZDGg/Design-sans-titre-6.png",
+  },
+  {
+    id: 6,
+    title:
+      "Développeur Fronted Javascript - Etech Consulting (Septembre 2022 - Juillet 2025)",
+    blabla:
+      "Chez Etech Consulting, j'interviens principalement en tant que développeur Fullstack Java/React. J'ai contribué au développement d'applications web et mobiles pour la Commune Urbaine d'Antananarivo (OIM-CUA), et à des projets de gestion et de traçabilité pour Renault. J' ai participé à la conception des maquettes graphiques avec Figma et travaillé sur le développement frontend de plusieurs grandes applications, en utilisant des outils et technologies comme React, Vite, Redux, TypeScript, MongoDB, Tailwind CSS, et Google Cloud Platform Maps (GCP Maps).",
+    technologies: [
+      "React",
+      "Vue",
+      "Vite",
+      "Redux",
+      "Pinia",
+      "TypeScript",
+      "MongoDB",
+      "Google Cloud Platform Maps",
+      "Spring boot",
+      "Tailwind CSS",
+    ],
+    url: "https://etechconsulting-mg.com/",
+    logo: "https://etechconsulting-mg.com/web/image/website/1/logo/etech?unique=bf3a896",
   },
   {
     id: 1,
@@ -49,36 +70,21 @@ export const EPXERIENCE_LIST: ExperienceDTO[] = [
     ],
   },
   {
-    id: 6,
-    title:
-      "Développeur Fullstack JAVA/React - Etech Consulting (Septembre 2022 - Juillet 2025)",
-    blabla:
-      "Chez Etech Consulting, j'interviens principalement en tant que développeur Fullstack Java/React. J'ai contribué au développement d'applications web et mobiles pour la Commune Urbaine d'Antananarivo (OIM-CUA), et à des projets de gestion et de traçabilité pour Renault. J' ai participé à la conception des maquettes graphiques avec Figma et travaillé sur le développement frontend de plusieurs grandes applications, en utilisant des outils et technologies comme React, Vite, Redux, TypeScript, MongoDB, Tailwind CSS, et Google Cloud Platform Maps (GCP Maps).",
-    technologies: [
-      "React",
-      "Vite",
-      "Redux",
-      "TypeScript",
-      "MongoDB",
-      "Google Cloud Platform Maps",
-      "Spring boot",
-      "Tailwind CSS",
-    ],
-    url: "https://etechconsulting-mg.com/",
-    logo: "https://etechconsulting-mg.com/web/image/website/1/logo/etech?unique=bf3a896",
-  },
-  {
     id: 3,
     title: "Développeur Frontend Principal - Indépendant (2024)",
     blabla:
       "Développeur frontend principal sur An-Tsoratra, une plateforme numérique pour la gestion de la vie quotidienne avec contenu, rédaction, statistiques et outils utilisateur. Conception et implémentation d'interfaces utilisateur intuitives et performantes : pages de contenu, tableau de bord, espace utilisateur, et affichage des statistiques. Participation active au développement de CashPoint mobile avec adaptation responsive, optimisation UX pour petits écrans et navigation fluide. Collaboration avec l'équipe backend pour l'intégration des API d'authentification, gestion des contenus et statistiques. Mise en place d'UI modernes cohérentes avec le branding, amélioration de l'expérience mobile et réduction des temps de chargement.",
     technologies: [
       "React",
+      "Vuejs",
       "Next.js",
+      "Nuxt.js",
+      "Nest.js",
       "Tailwind CSS",
       "i18next",
       "PWA",
       "Redux",
+      "Pinia",
       "RTK Query",
       "Axios",
       "Responsive Design",
