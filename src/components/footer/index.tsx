@@ -28,7 +28,7 @@ export default function Contacts() {
   };
 
   return (
-    <div className="flex flex-col w-full gap-8">
+    <div className="flex flex-col w-full gap-8 px-4 lg:px-0">
       {/* Enhanced Section Header */}
       <div className="text-center space-y-4">
         <div>
