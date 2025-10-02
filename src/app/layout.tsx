@@ -6,7 +6,8 @@ const inter = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Paul Odon",
-  description: "Ce site présente Paul Odon ANDRIANANTENAINA",
+  description:
+    "Ce site présente Paul Odon ANDRIANANTENAINA, ingénieur developpeur fullstackJS, React, Vue, Nestjs et react native",
 };
 
 export default function RootLayout({
@@ -17,6 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
