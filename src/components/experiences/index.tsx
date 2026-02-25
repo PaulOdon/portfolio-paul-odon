@@ -3,6 +3,7 @@ import React from "react";
 import { EPXERIENCE_LIST } from "./experienceList";
 import ExperienceItem from "./ExperienceItem";
 import { parseExperienceTitle } from "./ExperienceParser";
+import { useRef } from "react";
 
 const topTechnologies = [
   "Next.js", "Nuxt.js", "Nest.js", "React Native",
@@ -13,6 +14,11 @@ export default function Experiences() {
   const [selectedIndex, setSelectedIndex] = React.useState<number | null>(null);
   const [modalOpen, setModalOpen] = React.useState(false);
   const [showMobileDetail, setShowMobileDetail] = React.useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollTimeline = (direction: "left" | "right") => {
+    scrollRef.current?.scrollBy({ left: direction === "right" ? 300 : -300, behavior: "smooth" });
+  };
 
   const parsedList = EPXERIENCE_LIST.map((exp) =>
     parseExperienceTitle(exp.title as string)
@@ -57,11 +63,37 @@ export default function Experiences() {
 
       {/* Horizontal Timeline — Desktop seulement */}
       <div className="relative w-full hidden md:block">
-        {/* Fade edges */}
-        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-black to-transparent z-10" />
-        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-black to-transparent z-10" />
+        {/* Fade edges + nav buttons */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-black to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-black to-transparent z-10" />
 
-        <div className="overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+        {/* Left button */}
+        <button
+          onClick={() => scrollTimeline("left")}
+          aria-label="Défiler vers la gauche"
+          className="absolute left-1 top-1/2 -translate-y-1/2 z-20 w-8 h-8 flex items-center justify-center rounded-full bg-gray-900/80 border border-gray-700 text-gray-400 hover:text-white hover:border-gray-500 transition-all duration-200 focus:outline-none"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        {/* Right button */}
+        <button
+          onClick={() => scrollTimeline("right")}
+          aria-label="Défiler vers la droite"
+          className="absolute right-1 top-1/2 -translate-y-1/2 z-20 w-8 h-8 flex items-center justify-center rounded-full bg-gray-900/80 border border-gray-700 text-gray-400 hover:text-white hover:border-gray-500 transition-all duration-200 focus:outline-none"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        <div
+          ref={scrollRef}
+          className="overflow-x-auto pb-2 scrollbar-hidden"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
           <div className="min-w-max mx-auto px-12">
             <div className="flex">
               {EPXERIENCE_LIST.map((exp, i) => {

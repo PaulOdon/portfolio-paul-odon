@@ -14,7 +14,7 @@ export default function Navbar() {
       setIsScrolled(window.scrollY > 50);
 
       // Détection de la section active
-      const sections = ["home", "experiences", "formations", "contact"];
+      const sections = ["home", "skills", "experiences", "projects", "formations", "contact"];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -53,7 +53,9 @@ export default function Navbar() {
 
   const navItems = [
     { id: "home", label: "Accueil" },
+    { id: "skills", label: "Compétences" },
     { id: "experiences", label: "Expériences" },
+    { id: "projects", label: "Projets" },
     { id: "formations", label: "Formations" },
     { id: "contact", label: "Contact" },
   ];
@@ -152,7 +154,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-500 ${
-          isMobileMenuOpen ? "max-h-96" : "max-h-0"
+          isMobileMenuOpen ? "max-h-[32rem]" : "max-h-0"
         }`}
       >
         <div className="px-4 pt-2 pb-6 space-y-2 bg-black/95 backdrop-blur-xl border-t border-primary/10">

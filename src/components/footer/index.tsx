@@ -74,7 +74,7 @@ export default function Contacts() {
                       onClick={() =>
                         copyToClipboard(
                           "andrianantenainapaulodon@gmail.com",
-                          "email"
+                          "email",
                         )
                       }
                       className="absolute -right-1 top-0 p-1 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-primary/10 rounded"
@@ -231,12 +231,16 @@ export default function Contacts() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            <p className="text-gray-400 text-sm">Portfolio Paul Odon - 2025</p>
+            <p className="text-gray-400 text-sm">
+              Portfolio Paul Odon - {new Date().getFullYear()}
+            </p>
           </div>
 
           <div className="flex items-center gap-4 text-xs text-gray-500">
             <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
-            <span>Version 0.7</span>
+            <span>Version 0.8</span>
+            <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
+            <span>Dernière mise à jour: 22.02.2026</span>
           </div>
         </div>
 

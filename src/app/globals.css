@@ -116,6 +116,11 @@
     animation: slideUp 0.8s ease-out forwards;
   }
 
+  /* Hide scrollbar (webkit) */
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
   /* Effet de brillance progressive */
   @keyframes shimmer {
     0% {
