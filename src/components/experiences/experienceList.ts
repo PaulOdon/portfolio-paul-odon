@@ -71,9 +71,9 @@ export const EPXERIENCE_LIST: ExperienceDTO[] = [
   },
   {
     id: 3,
-    title: "Développeur Frontend Principal - Indépendant (2024)",
+    title: "Développeur Frontend - Indépendant (2024)",
     blabla:
-      "Développeur frontend principal sur An-Tsoratra, une plateforme numérique pour la gestion de la vie quotidienne avec contenu, rédaction, statistiques et outils utilisateur. Conception et implémentation d'interfaces utilisateur intuitives et performantes : pages de contenu, tableau de bord, espace utilisateur, et affichage des statistiques. Participation active au développement de CashPoint mobile avec adaptation responsive, optimisation UX pour petits écrans et navigation fluide. Collaboration avec l'équipe backend pour l'intégration des API d'authentification, gestion des contenus et statistiques. Mise en place d'UI modernes cohérentes avec le branding, amélioration de l'expérience mobile et réduction des temps de chargement.",
+      "Développeur frontend sur An-Tsoratra, une plateforme numérique pour la gestion de la vie quotidienne avec contenu, rédaction, statistiques et outils utilisateur. Conception et implémentation d'interfaces utilisateur intuitives et performantes : pages de contenu, tableau de bord, espace utilisateur, et affichage des statistiques. Participation active au développement de CashPoint mobile avec adaptation responsive, optimisation UX pour petits écrans et navigation fluide. Collaboration avec l'équipe backend pour l'intégration des API d'authentification, gestion des contenus et statistiques. Mise en place d'UI modernes cohérentes avec le branding, amélioration de l'expérience mobile et réduction des temps de chargement.",
     technologies: [
       "React",
       "Vuejs",

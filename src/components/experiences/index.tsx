@@ -2,145 +2,173 @@
 import React from "react";
 import { EPXERIENCE_LIST } from "./experienceList";
 import ExperienceItem from "./ExperienceItem";
-import { parseExperiences } from "./ExperienceParser";
+import { parseExperienceTitle } from "./ExperienceParser";
+
+const topTechnologies = [
+  "Next.js", "Nuxt.js", "Nest.js", "React Native",
+  "Postgresql", "Typescript", "Vite", "React", "Vue",
+];
 
 export default function Experiences() {
-  const [visibleCount, setVisibleCount] = React.useState(3);
+  const [selectedIndex, setSelectedIndex] = React.useState<number>(0);
 
-  const handleShowMore = () => {
-    setVisibleCount((prevCount) => prevCount + 3);
-  };
-  const handleShowLess = () => {
-    setVisibleCount((prevCount) => prevCount - 3);
-  };
-
-  // Parse experiences and get statistics
-  const parsedExperiences = parseExperiences(EPXERIENCE_LIST);
-  const totalExperiences = EPXERIENCE_LIST.length;
-  const freelanceCount = parsedExperiences.filter(
-    (exp) => exp.type === "freelance"
-  ).length;
-  const fullTimeCount = parsedExperiences.filter(
-    (exp) => exp.type === "fulltime"
-  ).length;
-  const allTechnologies = Array.from(
-    new Set(EPXERIENCE_LIST.flatMap((exp) => exp.technologies || []))
+  const parsedList = EPXERIENCE_LIST.map((exp) =>
+    parseExperienceTitle(exp.title as string)
   );
-  const topTechnologies = [
-    "Next.js",
-    "Nuxt.js",
-    "Nest.js",
-    "React Native",
-    "Postgresql",
-    "Typescript",
-    "Vite",
-    "React",
-    "Vue",
-  ];
+
   return (
-    <div className="flex flex-col w-full gap-6">
-      {/* Enhanced Section Header */}
+    <div className="flex flex-col w-full gap-8">
+      {/* Section Header */}
       <div className="text-center space-y-4">
         <div>
           <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent mb-2">
             Parcours Professionnel
           </h2>
-          <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+          <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
         </div>
-
-        {/* Experience Statistics */}
-        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
-          <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-4 border border-primary/20">
-            <div className="text-2xl font-bold text-primary">{totalExperiences}</div>
-            <div className="text-sm text-gray-400">Expériences</div>
-          </div>
-          <div className="bg-gradient-to-br from-green-500/10 to-green-500/5 rounded-2xl p-4 border border-green-500/20">
-            <div className="text-2xl font-bold text-green-400">{freelanceCount}</div>
-            <div className="text-sm text-gray-400">Freelance</div>
-          </div>
-          <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-4 border border-accent/20">
-            <div className="text-2xl font-bold text-accent">{fullTimeCount}</div>
-            <div className="text-sm text-gray-400">CDI/CDD</div>
-          </div>
-          <div className="bg-gradient-to-br from-purple-500/10 to-purple-500/5 rounded-2xl p-4 border border-purple-500/20">
-            <div className="text-2xl font-bold text-purple-400">{allTechnologies.length}</div>
-            <div className="text-sm text-gray-400">Technologies</div>
-          </div>
-        </div> */}
-
-        {/* Top Technologies Preview - Compact */}
-        {topTechnologies.length > 0 && (
-          <div className="flex items-center justify-center gap-1.5 flex-wrap text-xs">
-            <span className="text-gray-500">Stack principal:</span>
-            {topTechnologies.slice(0, 8).map((tech) => (
-              <span
-                key={tech}
-                className="bg-gray-800/40 text-gray-400 px-2 py-0.5 rounded-md border border-gray-700/30 text-xs"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        )}
-      </div>
-
-      {/* Experiences Grid */}
-      <div className="max-w-5xl mx-auto">
-        <div className="grid gap-4">
-          {EPXERIENCE_LIST.slice(0, visibleCount).map((experience, index) => (
-            <div
-              key={experience.id}
-              style={{ animationDelay: `${index * 0.1}s` }}
+        <div className="flex items-center justify-center gap-1.5 flex-wrap text-xs">
+          <span className="text-gray-500">Stack principal:</span>
+          {topTechnologies.map((tech) => (
+            <span
+              key={tech}
+              className="bg-gray-800/40 text-gray-400 px-2 py-0.5 rounded-md border border-gray-700/30"
             >
-              <ExperienceItem experience={experience} />
-            </div>
+              {tech}
+            </span>
           ))}
         </div>
       </div>
 
-      {/* Enhanced Navigation - Mobile Responsive */}
-      <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-3 px-4">
-        {visibleCount < EPXERIENCE_LIST.length && (
-          <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
-            <button
-              className="group relative bg-gradient-to-r from-accent to-accent-light text-white px-6 sm:px-8 py-3 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center gap-2 sm:gap-3 overflow-hidden w-full sm:w-auto text-sm sm:text-base"
-              onClick={handleShowMore}
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-accent-light to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <span className="relative z-10">Voir plus</span>
-              <svg
-                className="relative z-10 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-y-0.5 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-              <span className="absolute -right-1 sm:-right-2 top-1/2 transform -translate-y-1/2 bg-white/20 text-xs px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-full">
-                +{EPXERIENCE_LIST.length - visibleCount}
-              </span>
-            </button>
+      {/* Horizontal Timeline */}
+      <div className="relative w-full">
+        {/* Fade edges */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-black to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-black to-transparent z-10" />
 
-            <div className="text-center text-xs sm:text-sm text-gray-400">
-              <span className="font-medium">{visibleCount}</span> sur{" "}
-              <span className="font-medium">{EPXERIENCE_LIST.length}</span>
+        <div className="overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+          <div className="min-w-max mx-auto px-12">
+            <div className="flex">
+              {EPXERIENCE_LIST.map((exp, i) => {
+                const { position, company, startDate } = parsedList[i];
+                const isSelected = selectedIndex === i;
+                const isEven = i % 2 === 0;
+
+                return (
+                  <div
+                    key={exp.id ?? i}
+                    className="flex flex-col items-center"
+                    style={{ width: "164px" }}
+                  >
+                    {/* Top label — shown for even indices */}
+                    <div className="h-20 w-full flex flex-col justify-end pb-3 px-2 text-center">
+                      {isEven && (
+                        <>
+                          <p
+                            className={`text-xs font-semibold line-clamp-2 leading-tight transition-colors duration-300 ${
+                              isSelected ? "text-accent" : "text-gray-300"
+                            }`}
+                          >
+                            {position}
+                          </p>
+                          <p className="text-xs text-gray-500 mt-0.5 truncate">
+                            {company}
+                          </p>
+                        </>
+                      )}
+                    </div>
+
+                    {/* Connector line to top label */}
+                    <div
+                      className={`w-px transition-colors duration-300 ${
+                        isEven
+                          ? isSelected
+                            ? "h-3 bg-accent/60"
+                            : "h-3 bg-gray-700"
+                          : "h-0"
+                      }`}
+                    />
+
+                    {/* Dot + horizontal line */}
+                    <div className="relative w-full h-6 flex justify-center items-center">
+                      {/* Left line segment */}
+                      {i > 0 && (
+                        <div className="absolute right-1/2 left-0 top-1/2 -translate-y-1/2 h-px bg-gray-700" />
+                      )}
+                      {/* Right line segment */}
+                      {i < EPXERIENCE_LIST.length - 1 && (
+                        <div className="absolute left-1/2 right-0 top-1/2 -translate-y-1/2 h-px bg-gray-700" />
+                      )}
+
+                      {/* Dot */}
+                      <button
+                        onClick={() => setSelectedIndex(i)}
+                        aria-label={`Voir ${position} chez ${company}`}
+                        className={`relative z-10 w-4 h-4 rounded-full border-2 transition-all duration-300 focus:outline-none ${
+                          isSelected
+                            ? "bg-accent border-accent shadow-lg shadow-accent/40 scale-125"
+                            : "bg-gray-900 border-gray-600 hover:border-accent/60 hover:scale-110"
+                        }`}
+                      />
+                    </div>
+
+                    {/* Connector line to bottom label */}
+                    <div
+                      className={`w-px transition-colors duration-300 ${
+                        !isEven
+                          ? isSelected
+                            ? "h-3 bg-accent/60"
+                            : "h-3 bg-gray-700"
+                          : "h-0"
+                      }`}
+                    />
+
+                    {/* Date chip */}
+                    <button
+                      onClick={() => setSelectedIndex(i)}
+                      className={`mt-1 px-2.5 py-0.5 rounded-full text-xs font-medium border transition-all duration-300 focus:outline-none ${
+                        isSelected
+                          ? "text-accent border-accent/50 bg-accent/10"
+                          : "text-gray-500 border-gray-700 hover:text-gray-300 hover:border-gray-500"
+                      }`}
+                    >
+                      {startDate}
+                    </button>
+
+                    {/* Bottom label — shown for odd indices */}
+                    <div className="h-20 w-full flex flex-col justify-start pt-3 px-2 text-center">
+                      {!isEven && (
+                        <>
+                          <p
+                            className={`text-xs font-semibold line-clamp-2 leading-tight transition-colors duration-300 ${
+                              isSelected ? "text-accent" : "text-gray-300"
+                            }`}
+                          >
+                            {position}
+                          </p>
+                          <p className="text-xs text-gray-500 mt-0.5 truncate">
+                            {company}
+                          </p>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
-        )}
+        </div>
+      </div>
 
-        {visibleCount > 3 && (
-          <button
-            className="group border-2 border-gray-600/50 hover:border-gray-400 text-gray-400 hover:text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 backdrop-blur-sm w-full sm:w-auto text-sm sm:text-base"
-            onClick={handleShowLess}
-          >
-            Voir moins
+      {/* Selected Experience Detail */}
+      <div className="max-w-5xl mx-auto w-full px-4">
+        {/* Arrow indicator */}
+        <div className="flex justify-center mb-3">
+          <div className="flex flex-col items-center gap-1">
+            <p className="text-xs text-gray-500">
+              {parsedList[selectedIndex].position} — {parsedList[selectedIndex].company}
+            </p>
             <svg
-              className="w-3 h-3 sm:w-4 sm:h-4 group-hover:-translate-y-0.5 transition-transform"
+              className="w-4 h-4 text-accent animate-bounce"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -149,11 +177,16 @@ export default function Experiences() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d="M5 15l7-7 7 7"
+                d="M19 9l-7 7-7-7"
               />
             </svg>
-          </button>
-        )}
+          </div>
+        </div>
+
+        <ExperienceItem
+          key={selectedIndex}
+          experience={EPXERIENCE_LIST[selectedIndex]}
+        />
       </div>
     </div>
   );
