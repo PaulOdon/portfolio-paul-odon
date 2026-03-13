@@ -14,7 +14,7 @@ export default function Navbar() {
       setIsScrolled(window.scrollY > 50);
 
       // Détection de la section active
-      const sections = ["home", "skills", "experiences", "projects", "formations", "contact"];
+      const sections = ["home", "projects", "experiences", "skills", "formations", "contact"];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -53,9 +53,9 @@ export default function Navbar() {
 
   const navItems = [
     { id: "home", label: "Accueil" },
-    { id: "skills", label: "Compétences" },
-    { id: "experiences", label: "Expériences" },
     { id: "projects", label: "Projets" },
+    { id: "experiences", label: "Expériences" },
+    { id: "skills", label: "Compétences" },
     { id: "formations", label: "Formations" },
     { id: "contact", label: "Contact" },
   ];

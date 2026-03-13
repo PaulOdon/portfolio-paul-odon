@@ -28,8 +28,8 @@ export default function Contacts() {
   };
 
   return (
-    <div className="flex flex-col w-full gap-8 px-4 lg:px-0">
-      {/* Enhanced Section Header */}
+    <div className="flex flex-col w-full gap-10 px-4 lg:px-0">
+      {/* Header */}
       <div className="text-center space-y-4">
         <div>
           <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent mb-2">
@@ -43,212 +43,173 @@ export default function Contacts() {
         </p>
       </div>
 
-      {/* Contact Cards Grid */}
+      {/* Contact Cards */}
       <div className="max-w-5xl mx-auto w-full">
-        <div className="grid gap-4 md:gap-6">
-          {/* Main Contact Card */}
-          <div className="bg-gradient-to-br from-dark-gray/90 to-darker-gray/90 backdrop-blur-md rounded-2xl border border-gray-800/60 hover:border-primary/40 transition-all duration-500 group overflow-hidden">
-            <div className="p-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                {/* Email */}
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-primary/10 rounded-lg border border-primary/20">
-                      <EnvelopeIcon className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-white text-sm">
-                        Email
-                      </h3>
-                      <p className="text-xs text-gray-500">Personnel</p>
-                    </div>
-                  </div>
-                  <div className="relative">
-                    <a
-                      href="mailto:andrianantenainapaulodon@gmail.com"
-                      className="block text-gray-300 hover:text-primary transition-colors text-sm break-all group-hover:text-primary/80"
-                    >
-                      andrianantenainapaulodon@gmail.com
-                    </a>
-                    <button
-                      onClick={() =>
-                        copyToClipboard(
-                          "andrianantenainapaulodon@gmail.com",
-                          "email",
-                        )
-                      }
-                      className="absolute -right-1 top-0 p-1 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-primary/10 rounded"
-                      title="Copier l'email"
-                    >
-                      <svg
-                        className="w-4 h-4 text-gray-400 hover:text-primary"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-                        />
-                      </svg>
-                    </button>
-                    {copiedEmail && (
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded border border-green-500/30">
-                        Copié !
-                      </div>
-                    )}
-                  </div>
+        <div className="grid md:grid-cols-2 gap-4">
+          {/* Email Card */}
+          <div className="group relative rounded-2xl border border-gray-800/60 p-6 overflow-hidden transition-all duration-500 hover:border-primary/40"
+            style={{ background: "rgba(17, 17, 17, 0.5)" }}
+          >
+            <div className="absolute -top-16 -right-16 w-32 h-32 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+              style={{ background: "radial-gradient(circle, rgba(243,122,28,0.15), transparent 70%)" }}
+            />
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="p-2.5 bg-primary/10 rounded-xl border border-primary/20 group-hover:bg-primary/15 transition-colors duration-300">
+                  <EnvelopeIcon className="w-5 h-5 text-primary" />
                 </div>
-
-                {/* Phone */}
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-accent/10 rounded-lg border border-accent/20">
-                      <WhatsappIcon />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-white text-sm">
-                        Whatsapp
-                      </h3>
-                      <p className="text-xs text-gray-500">Madagascar</p>
-                    </div>
-                  </div>
-                  <div className="relative">
-                    <a
-                      href="tel:+261342862206"
-                      className="block text-gray-300 hover:text-accent transition-colors text-sm group-hover:text-accent/80"
-                    >
-                      +261 34 28 622 06
-                    </a>
-                    <button
-                      onClick={() => copyToClipboard("+261342862206", "phone")}
-                      className="absolute -right-1 top-0 p-1 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-accent/10 rounded"
-                      title="Copier le numéro"
-                    >
-                      <svg
-                        className="w-4 h-4 text-gray-400 hover:text-accent"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-                        />
-                      </svg>
-                    </button>
-                    {copiedPhone && (
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded border border-green-500/30">
-                        Copié !
-                      </div>
-                    )}
-                  </div>
+                <div>
+                  <h3 className="font-semibold text-white text-sm">Email</h3>
+                  <p className="text-xs text-gray-500">Personnel</p>
                 </div>
+              </div>
+              <div className="relative">
+                <a
+                  href="mailto:andrianantenainapaulodon@gmail.com"
+                  className="block text-gray-300 hover:text-primary transition-colors text-sm break-all"
+                >
+                  andrianantenainapaulodon@gmail.com
+                </a>
+                <button
+                  onClick={() =>
+                    copyToClipboard(
+                      "andrianantenainapaulodon@gmail.com",
+                      "email",
+                    )
+                  }
+                  className="mt-3 inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-primary transition-colors cursor-pointer"
+                  title="Copier l'email"
+                >
+                  <svg
+                    className="w-3.5 h-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    />
+                  </svg>
+                  {copiedEmail ? (
+                    <span className="text-green-400">Copié !</span>
+                  ) : (
+                    <span>Copier</span>
+                  )}
+                </button>
               </div>
             </div>
           </div>
 
-          {/* Additional Info Cards */}
-          <div className="grid sm:grid-cols-2 gap-4">
-            {/* Location */}
-            <div className="bg-gradient-to-br from-dark-gray/60 to-darker-gray/60 backdrop-blur-sm rounded-xl p-4 border border-gray-800/40 hover:border-green-500/30 transition-all duration-300 group">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-green-500/10 rounded-lg border border-green-500/20 group-hover:bg-green-500/20 transition-colors">
-                  <MapPinIcon className="w-4 h-4 text-green-400" />
+          {/* WhatsApp Card */}
+          <div className="group relative rounded-2xl border border-gray-800/60 p-6 overflow-hidden transition-all duration-500 hover:border-accent/40"
+            style={{ background: "rgba(17, 17, 17, 0.5)" }}
+          >
+            <div className="absolute -top-16 -right-16 w-32 h-32 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+              style={{ background: "radial-gradient(circle, rgba(59,130,246,0.15), transparent 70%)" }}
+            />
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="p-2.5 bg-accent/10 rounded-xl border border-accent/20 group-hover:bg-accent/15 transition-colors duration-300">
+                  <WhatsappIcon />
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium text-white">
-                    Localisation
-                  </h4>
-                  <p className="text-xs text-gray-400">
-                    Anywhere, je traille en remote
-                  </p>
+                  <h3 className="font-semibold text-white text-sm">Whatsapp</h3>
+                  <p className="text-xs text-gray-500">Madagascar</p>
                 </div>
+              </div>
+              <div className="relative">
+                <a
+                  href="tel:+261342862206"
+                  className="block text-gray-300 hover:text-accent transition-colors text-sm"
+                >
+                  +261 34 28 622 06
+                </a>
+                <button
+                  onClick={() => copyToClipboard("+261342862206", "phone")}
+                  className="mt-3 inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-accent transition-colors cursor-pointer"
+                  title="Copier le numéro"
+                >
+                  <svg
+                    className="w-3.5 h-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    />
+                  </svg>
+                  {copiedPhone ? (
+                    <span className="text-green-400">Copié !</span>
+                  ) : (
+                    <span>Copier</span>
+                  )}
+                </button>
               </div>
             </div>
+          </div>
+        </div>
 
-            {/* Availability */}
-            <div className="bg-gradient-to-br from-dark-gray/60 to-darker-gray/60 backdrop-blur-sm rounded-xl p-4 border border-gray-800/40 hover:border-blue-500/30 transition-all duration-300 group">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-blue-500/10 rounded-lg border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors">
-                  <ClockIcon className="w-4 h-4 text-blue-400" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-medium text-white">
-                    Disponibilité
-                  </h4>
-                  <div className="flex items-center gap-1">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <p className="text-xs text-gray-400">
-                      Ouvert aux opportunités
-                    </p>
-                  </div>
-                </div>
-              </div>
+        {/* Info row */}
+        <div className="grid sm:grid-cols-2 gap-3 mt-4">
+          <div className="flex items-center gap-3 px-5 py-3.5 rounded-xl bg-white/[0.02] border border-white/[0.05] hover:border-green-500/20 transition-colors duration-300">
+            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+            <div>
+              <span className="text-sm text-white font-medium">Localisation</span>
+              <p className="text-xs text-gray-500">Anywhere, je travaille en remote</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3 px-5 py-3.5 rounded-xl bg-white/[0.02] border border-white/[0.05] hover:border-accent/20 transition-colors duration-300">
+            <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+            <div>
+              <span className="text-sm text-white font-medium">Disponibilité</span>
+              <p className="text-xs text-gray-500">Ouvert aux opportunités</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Social Links */}
-      <div className="flex flex-col items-center gap-4">
-        <h3 className="text-lg font-semibold text-gray-300">Réseaux Sociaux</h3>
-        <div className="flex justify-center gap-4">
-          <a
-            href="https://www.linkedin.com/in/paul-odon"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative p-4 rounded-2xl bg-gradient-to-br from-dark-gray/80 to-darker-gray/80 border border-gray-800/50 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 hover:shadow-xl overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary-light/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <Linkedin />
-            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-primary/20 text-primary text-xs px-2 py-1 rounded border border-primary/30 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:-bottom-12">
-              LinkedIn
-            </div>
-          </a>
+      <div className="flex justify-center gap-4">
+        <a
+          href="https://www.linkedin.com/in/paul-odon"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative p-4 rounded-2xl bg-white/[0.03] border border-white/[0.06] hover:border-[#0A66C2]/40 transition-all duration-300 hover:scale-105 overflow-hidden"
+        >
+          <div className="absolute inset-0 bg-[#0A66C2]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <Linkedin />
+        </a>
 
-          <a
-            href="https://github.com/PaulOdon"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative p-4 rounded-2xl bg-gradient-to-br from-dark-gray/80 to-darker-gray/80 border border-gray-800/50 hover:border-gray-400/40 transition-all duration-300 transform hover:scale-105 hover:shadow-xl overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-600/10 to-gray-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <Github />
-            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-600/20 text-gray-300 text-xs px-2 py-1 rounded border border-gray-600/30 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:-bottom-12">
-              GitHub
-            </div>
-          </a>
-        </div>
+        <a
+          href="https://github.com/PaulOdon"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative p-4 rounded-2xl bg-white/[0.03] border border-white/[0.06] hover:border-gray-400/40 transition-all duration-300 hover:scale-105 overflow-hidden"
+        >
+          <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <Github />
+        </a>
       </div>
 
-      {/* Enhanced Footer */}
-      <div className="pt-8 border-t border-gray-800/50 space-y-4">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            <p className="text-gray-400 text-sm">
-              Portfolio Paul Odon - {new Date().getFullYear()}
-            </p>
-          </div>
-
-          <div className="flex items-center gap-4 text-xs text-gray-500">
-            <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
-            <span>Version 0.8</span>
-            <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
-            <span>Dernière mise à jour: 22.02.2026</span>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <p className="text-xs text-gray-600">
-            Développeur FullStack passionné par la création d&apos;expériences
-            numériques exceptionnelles
+      {/* Footer */}
+      <div className="pt-8 border-t border-white/[0.05]">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-gray-500 text-sm">
+            Portfolio Paul Odon &mdash; {new Date().getFullYear()}
           </p>
+          <div className="flex items-center gap-3 text-xs text-gray-600">
+            <span>v0.8</span>
+            <span className="w-1 h-1 bg-gray-700 rounded-full" />
+            <span>Mise à jour: 22.02.2026</span>
+          </div>
         </div>
       </div>
     </div>

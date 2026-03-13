@@ -241,7 +241,7 @@ export default function Heroes() {
       {/* Scroll down */}
       <button
         onClick={() => {
-          const el = document.getElementById("skills");
+          const el = document.getElementById("projects");
           if (el) el.scrollIntoView({ behavior: "smooth" });
         }}
         aria-label="Aller à la section suivante"

@@ -19,15 +19,15 @@ export default function Home() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-16 pb-8">
-        {/* Compétences Section */}
+        {/* Projets Section */}
         <AnimatedSection
-          id="skills"
+          id="projects"
           animation="fade-up"
           delay={100}
           className="lg:min-h-screen lg:flex lg:items-center"
         >
           <section className="py-6 px-4 w-full">
-            <Skills />
+            <Projects />
           </section>
           <ScrollToNext targetId="experiences" />
         </AnimatedSection>
@@ -44,20 +44,20 @@ export default function Home() {
           <section className="py-6 px-4 w-full">
             <Experiences />
           </section>
-          <ScrollToNext targetId="projects" />
+          <ScrollToNext targetId="skills" />
         </AnimatedSection>
 
         <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent" />
 
-        {/* Projets Section */}
+        {/* Compétences Section */}
         <AnimatedSection
-          id="projects"
+          id="skills"
           animation="fade-up"
           delay={100}
           className="lg:min-h-screen lg:flex lg:items-center"
         >
           <section className="py-6 px-4 w-full">
-            <Projects />
+            <Skills />
           </section>
           <ScrollToNext targetId="formations" />
         </AnimatedSection>
