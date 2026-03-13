@@ -135,4 +135,48 @@
     background-size: 200% 100%;
     animation: shimmer 3s ease-in-out infinite;
   }
+
+  /* Rotating gradient border */
+  @keyframes borderRotate {
+    0% { --angle: 0deg; }
+    100% { --angle: 360deg; }
+  }
+
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  .card-glow {
+    position: relative;
+    background: #0a0a0a;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  .card-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    padding: 1px;
+    background: conic-gradient(from var(--angle), transparent 40%, rgba(243,122,28,0.4) 50%, transparent 60%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s;
+    animation: borderRotate 4s linear infinite;
+  }
+
+  .card-glow:hover::before {
+    opacity: 1;
+  }
+
+  /* Dot grid pattern */
+  .dot-grid {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
 }
