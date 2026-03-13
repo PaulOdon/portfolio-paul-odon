@@ -61,7 +61,7 @@ export default function AnimatedSection({
     <div
       ref={sectionRef}
       id={id}
-      className={`transition-all duration-1000 ${
+      className={`relative transition-all duration-1000 ${
         isVisible
           ? `opacity-100 ${animationClasses[animation]}`
           : "opacity-0 translate-y-10"

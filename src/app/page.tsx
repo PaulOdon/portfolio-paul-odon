@@ -5,6 +5,7 @@ import Heroes from "@/components/hero";
 import Skills from "@/components/skills";
 import Projects from "@/components/projects";
 import AnimatedSection from "@/components/AnimatedSection";
+import ScrollToNext from "@/components/ScrollToNext";
 import ScrollToTop from "@/components/ScrollToTop";
 import React from "react";
 
@@ -28,6 +29,7 @@ export default function Home() {
           <section className="py-6 px-4 w-full">
             <Skills />
           </section>
+          <ScrollToNext targetId="experiences" />
         </AnimatedSection>
 
         <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent" />
@@ -42,6 +44,7 @@ export default function Home() {
           <section className="py-6 px-4 w-full">
             <Experiences />
           </section>
+          <ScrollToNext targetId="projects" />
         </AnimatedSection>
 
         <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent" />
@@ -56,6 +59,7 @@ export default function Home() {
           <section className="py-6 px-4 w-full">
             <Projects />
           </section>
+          <ScrollToNext targetId="formations" />
         </AnimatedSection>
 
         <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent" />
@@ -76,6 +80,7 @@ export default function Home() {
             </div>
             <Formations />
           </section>
+          <ScrollToNext targetId="contact" />
         </AnimatedSection>
       </div>
 
