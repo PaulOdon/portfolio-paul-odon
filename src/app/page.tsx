@@ -18,10 +18,14 @@ export default function Home() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-16 pb-8">
-
         {/* Compétences Section */}
-        <AnimatedSection id="skills" animation="fade-up" delay={100}>
-          <section className="py-6 px-4">
+        <AnimatedSection
+          id="skills"
+          animation="fade-up"
+          delay={100}
+          className="lg:min-h-screen lg:flex lg:items-center"
+        >
+          <section className="py-6 px-4 w-full">
             <Skills />
           </section>
         </AnimatedSection>
@@ -29,8 +33,13 @@ export default function Home() {
         <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent" />
 
         {/* Experiences Section */}
-        <AnimatedSection id="experiences" animation="fade-up" delay={100}>
-          <section className="py-6 px-4">
+        <AnimatedSection
+          id="experiences"
+          animation="fade-up"
+          delay={100}
+          className="lg:min-h-screen lg:flex lg:items-center"
+        >
+          <section className="py-6 px-4 w-full">
             <Experiences />
           </section>
         </AnimatedSection>
@@ -38,8 +47,13 @@ export default function Home() {
         <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent" />
 
         {/* Projets Section */}
-        <AnimatedSection id="projects" animation="fade-up" delay={100}>
-          <section className="py-6 px-4">
+        <AnimatedSection
+          id="projects"
+          animation="fade-up"
+          delay={100}
+          className="lg:min-h-screen lg:flex lg:items-center"
+        >
+          <section className="py-6 px-4 w-full">
             <Projects />
           </section>
         </AnimatedSection>
@@ -47,8 +61,13 @@ export default function Home() {
         <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent" />
 
         {/* Formations Section */}
-        <AnimatedSection id="formations" animation="fade-up" delay={100}>
-          <section>
+        <AnimatedSection
+          id="formations"
+          animation="fade-up"
+          delay={100}
+          className="lg:min-h-screen lg:flex lg:items-center"
+        >
+          <section className="w-full">
             <div className="text-center mb-6">
               <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent mb-2">
                 Formation
@@ -58,12 +77,16 @@ export default function Home() {
             <Formations />
           </section>
         </AnimatedSection>
-
       </div>
 
       {/* Contact Section */}
-      <AnimatedSection id="contact" animation="slide-up" delay={100}>
-        <section className="py-8 mt-8">
+      <AnimatedSection
+        id="contact"
+        animation="slide-up"
+        delay={100}
+        className="lg:min-h-screen lg:flex lg:items-center"
+      >
+        <section className="py-8 mt-8 w-full">
           <div className="max-w-5xl mx-auto">
             <Contacts />
           </div>

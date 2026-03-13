@@ -14,8 +14,9 @@ const ROLES = [
 ];
 
 const STATS = [
-  { value: "4+", label: "ans d'expérience" },
-  { value: "25+", label: "technologies" },
+  { value: "5+", label: "ans d'expérience" },
+  { value: "+4", label: "dans dans une entreprise" },
+  { value: "20+", label: "projets réalisés" },
 ];
 
 export default function Heroes() {
@@ -185,7 +186,7 @@ export default function Heroes() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"
-                  className="p-2.5 rounded-full bg-gray-900 border border-gray-800 hover:border-green-500/50 hover:bg-green-500/10 text-gray-400 hover:text-green-400 transition-all duration-300"
+                  className="p-4 rounded-full bg-gray-900 border border-gray-800 hover:border-green-500/50 hover:bg-green-500/10 text-gray-400 hover:text-green-400 transition-all duration-300"
                 >
                   <WhatsappIcon />
                 </a>
